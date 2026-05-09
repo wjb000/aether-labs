@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether Labs · AI for Scientific Discovery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        :root {
+            --primary: #6366f1;
+        }
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 600;
+        }
+        .cosmic-bg {
+            background: radial-gradient(circle at center, #1e1135 0%, #0f0a1f 100%);
+        }
+        .section-header {
+            font-size: 2.75rem;
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+        .nav-scrolled {
+            background-color: rgba(15, 10, 31, 0.95);
+            backdrop-filter: blur(12px);
+        }
+        .feature-card {
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .cosmic-gradient {
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-[#0f0a1f] text-white">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 rounded-2xl bg-gradient-to-br from-indigo-500 via-purple-500 to-violet-500 flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl tracking-tighter">A</span>
+                    </div>
+                    <div>
+                        <span class="font-display text-2xl font-semibold tracking-tight">Aether Labs</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-x-8 text-sm">
+                    <a href="#product" class="hover:text-indigo-400 transition-colors">Product</a>
+                    <a href="#pricing" class="hover:text-indigo-400 transition-colors">Pricing</a>
+                    <a href="https://github.com/wjb000/aether-labs" target="_blank" class="hover:text-indigo-400 transition-colors">GitHub</a>
+                </div>
+
+                <div class="flex items-center gap-x-4">
+                    <a href="https://github.com/wjb000/aether-labs" target="_blank"
+                       class="hidden sm:flex items-center gap-x-2 px-4 py-2 text-sm font-medium border border-white/20 hover:bg-white/5 rounded-2xl transition-all">
+                        <i class="fab fa-github"></i>
+                        <span>Star on GitHub</span>
+                    </a>
+                    <button onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })"
+                            class="px-5 py-2.5 bg-white text-[#0f0a1f] hover:bg-white/90 transition-all font-semibold text-sm rounded-2xl flex items-center gap-x-2">
+                        <span>Join Waitlist</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="pt-20 cosmic-bg">
+        <div class="max-w-screen-xl mx-auto px-8 pt-16 pb-20">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-white/5 border border-white/10 mb-6">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-sm font-medium tracking-wide">Early Access • Q3 2026</span>
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-display tracking-tighter leading-[1.05] mb-6">
+                    The AI co-scientist.<br>
+                    <span class="cosmic-gradient">Built for discovery.</span>
+                </h1>
+                
+                <p class="max-w-lg text-xl text-white/70 mb-10">
+                    Aether Labs builds advanced AI systems that help researchers generate hypotheses, 
+                    synthesize literature, and accelerate scientific breakthroughs.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })"
+                            class="px-8 py-4 bg-white hover:bg-white/90 active:bg-white/80 transition-all text-[#0f0a1f] font-semibold rounded-3xl text-lg flex items-center justify-center gap-x-3 group">
+                        <span>Join the Waitlist</span>
+                        <i class="fas fa-arrow-right group-active:translate-x-0.5 transition-transform"></i>
+                    </button>
+                    
+                    <a href="https://github.com/wjb000/aether-labs" target="_blank"
+                       class="px-8 py-4 border border-white/30 hover:bg-white/5 transition-all font-semibold rounded-3xl text-lg flex items-center justify-center gap-x-3">
+                        <i class="fab fa-github text-xl"></i>
+                        <span>Explore on GitHub</span>
+                    </a>
+                </div>
+                
+                <div class="mt-8 flex items-center gap-x-6 text-sm text-white/50">
+                    <div class="flex -space-x-2">
+                        <div class="w-7 h-7 rounded-full bg-white/20 border border-white/30"></div>
+                        <div class="w-7 h-7 rounded-full bg-white/20 border border-white/30"></div>
+                        <div class="w-7 h-7 rounded-full bg-white/20 border border-white/30"></div>
+                    </div>
+                    <span>Trusted by early researchers at leading labs</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust / Mission -->
+    <div class="border-b border-white/10">
+        <div class="max-w-screen-xl mx-auto px-8 py-8">
+            <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-center text-sm">
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-globe text-indigo-400"></i>
+                    <span class="font-medium">Open Research First</span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-shield-alt text-indigo-400"></i>
+                    <span class="font-medium">Built for Scientific Rigor</span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-rocket text-indigo-400"></i>
+                    <span class="font-medium">Long-term Mission Aligned</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <div id="product" class="max-w-screen-xl mx-auto px-8 py-20">
+        <div class="text-center mb-14">
+            <div class="text-indigo-400 font-semibold tracking-[3px] text-xs mb-3">THE PLATFORM</div>
+            <h2 class="section-header tracking-tighter">Meet Aether Research</h2>
+            <p class="mt-4 max-w-md mx-auto text-white/60">Your intelligent partner for scientific discovery. Not another chatbot — a true research collaborator.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Feature 1 -->
+            <div class="feature-card bg-white/5 border border-white/10 rounded-3xl p-8">
+                <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-lightbulb text-3xl text-indigo-400"></i>
+                </div>
+                <h3 class="font-semibold text-2xl mb-3">Hypothesis Engine</h3>
+                <p class="text-white/70">Automatically generates novel, testable scientific hypotheses from literature and data. Prioritizes by impact and feasibility.</p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="feature-card bg-white/5 border border-white/10 rounded-3xl p-8">
+                <div class="w-12 h-12 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-book text-3xl text-purple-400"></i>
+                </div>
+                <h3 class="font-semibold text-2xl mb-3">Deep Literature Synthesis</h3>
+                <p class="text-white/70">Reads thousands of papers across disciplines. Surfaces contradictions, gaps, and emerging consensus with citations.</p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="feature-card bg-white/5 border border-white/10 rounded-3xl p-8">
+                <div class="w-12 h-12 rounded-2xl bg-violet-500/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-flask text-3xl text-violet-400"></i>
+                </div>
+                <h3 class="font-semibold text-2xl mb-3">Simulation &amp; Planning</h3>
+                <p class="text-white/70">Plans multi-step experiments, suggests protocols, and simulates outcomes using specialized scientific reasoning models.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- How it Works -->
+    <div class="bg-white/5 border-y border-white/10">
+        <div class="max-w-screen-xl mx-auto px-8 py-16">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="text-indigo-400 font-semibold tracking-[3px] text-xs mb-3">HOW IT WORKS</div>
+                    <h2 class="section-header tracking-tighter mb-6">From question to discovery in minutes, not months.</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-5">
+                            <div class="w-8 h-8 rounded-2xl bg-white/10 flex-shrink-0 flex items-center justify-center font-mono text-sm font-bold">01</div>
+                            <div>
+                                <div class="font-semibold mb-1">Ask or upload</div>
+                                <div class="text-white/70 text-sm">Describe your research question or upload papers/datasets.</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <div class="w-8 h-8 rounded-2xl bg-white/10 flex-shrink-0 flex items-center justify-center font-mono text-sm font-bold">02</div>
+                            <div>
+                                <div class="font-semibold mb-1">Aether reasons</div>
+                                <div class="text-white/70 text-sm">Our specialized models analyze, cross-reference, and simulate.</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <div class="w-8 h-8 rounded-2xl bg-white/10 flex-shrink-0 flex items-center justify-center font-mono text-sm font-bold">03</div>
+                            <div>
+                                <div class="font-semibold mb-1">Get actionable output</div>
+                                <div class="text-white/70 text-sm">Prioritized hypotheses, experiment plans, literature summaries, and citations.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-[#1a1433] border border-white/10 rounded-3xl p-8 text-sm">
+                    <div class="font-mono text-xs tracking-widest text-white/40 mb-4">EXAMPLE OUTPUT</div>
+                    <div class="space-y-4 text-white/80">
+                        <div>
+                            <span class="font-semibold text-emerald-400">New Hypothesis:</span> 
+                            <span class="text-white/90">"Targeting X with compound Y may modulate Z pathway in context of disease W, supported by 47 papers and simulation score 0.87."</span>
+                        </div>
+                        <div class="text-xs text-white/50">+ Recommended next experiments • Risk assessment • Relevant datasets</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing -->
+    <div id="pricing" class="max-w-screen-xl mx-auto px-8 py-20">
+        <div class="text-center mb-12">
+            <div class="text-indigo-400 font-semibold tracking-[3px] text-xs mb-3">PRICING</div>
+            <h2 class="section-header tracking-tighter">Start free. Scale with impact.</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <!-- Free -->
+            <div class="border border-white/10 rounded-3xl p-8">
+                <div class="font-semibold text-lg mb-1">Free</div>
+                <div class="text-4xl font-display tracking-tighter mb-6">$0</div>
+                <ul class="space-y-3 text-sm mb-8">
+                    <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-400"></i> <span>50 queries / month</span></li>
+                    <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-400"></i> <span>Public projects only</span></li>
+                    <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-400"></i> <span>Community support</span></li>
+                </ul>
+                <button onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })" 
+                        class="w-full py-3 border border-white/30 hover:bg-white/5 rounded-2xl font-medium text-sm transition-all">
+                    Get Started Free
+                </button>
+            </div>
+
+            <!-- Pro -->
+            <div class="border-2 border-indigo-500 rounded-3xl p-8 relative">
+                <div class="absolute -top-3 right-6 bg-indigo-500 text-xs font-bold px-4 py-1 rounded-2xl tracking-wider">MOST POPULAR</div>
+                <div class="font-semibold text-lg mb-1">Pro</div>
+                <div class="flex items-baseline gap-x-1 mb-6">
+                    <span class="text-4xl font-display tracking-tighter">$29</span>
+                    <span class="text-white/50">/user/mo</span>
+                </div>
+                <ul class="space-y-3 text-sm mb-8">
+                    <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-400"></i> <span>Unlimited queries</span></li>
+                    <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-400"></i> <span>Private projects &amp; workspaces</span></li>
+                    <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-400"></i> <span>Priority inference + exports</span></li>
+                    <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-400"></i> <span>API access</span></li>
+                </ul>
+                <button onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })" 
+                        class="w-full py-3 bg-white text-[#0f0a1f] hover:bg-white/90 rounded-2xl font-semibold text-sm transition-all">
+                    Start 14-day Pro trial
+                </button>
+            </div>
+
+            <!-- Team / Enterprise -->
+            <div class="border border-white/10 rounded-3xl p-8">
+                <div class="font-semibold text-lg mb-1">Team &amp; Enterprise</div>
+                <div class="text-4xl font-display tracking-tighter mb-1">Custom</div>
+                <div class="text-white/50 mb-6">Starting at $99+/mo</div>
+                <ul class="space-y-3 text-sm mb-8">
+                    <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-400"></i> <span>Everything in Pro</span></li>
+                    <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-400"></i> <span>Shared team workspaces</span></li>
+                    <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-400"></i> <span>SSO, admin controls, audit logs</span></li>
+                    <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-400"></i> <span>Custom model fine-tuning</span></li>
+                    <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-400"></i> <span>Dedicated support &amp; SLA</span></li>
+                </ul>
+                <button onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })" 
+                        class="w-full py-3 border border-white/30 hover:bg-white/5 rounded-2xl font-medium text-sm transition-all">
+                    Contact Sales
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Waitlist CTA -->
+    <div id="waitlist" class="max-w-screen-xl mx-auto px-8 pb-20">
+        <div class="max-w-2xl mx-auto text-center bg-white/5 border border-white/10 rounded-3xl p-12">
+            <h2 class="text-4xl font-display tracking-tighter mb-3">Be among the first to shape the future of scientific AI.</h2>
+            <p class="text-white/70 mb-8">Join the waitlist for early access to Aether Research. First users will help define the product and receive lifetime discounts.</p>
+            
+            <form id="waitlist-form" onsubmit="handleWaitlistSubmit(event)" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input type="email" id="email" placeholder="your@research.lab" required
+                       class="flex-1 bg-white/5 border border-white/20 focus:border-indigo-500 transition-colors px-5 py-3.5 rounded-2xl text-white placeholder:text-white/40 outline-none">
+                <button type="submit"
+                        class="px-8 py-3.5 bg-white hover:bg-white/90 active:bg-white/80 transition-all text-[#0f0a1f] font-semibold rounded-2xl whitespace-nowrap">
+                    Join Waitlist
+                </button>
+            </form>
+            <p class="text-xs text-white/40 mt-4">We respect your inbox. No spam, ever.</p>
+        </div>
+    </div>
+
+    <footer class="border-t border-white/10 py-10">
+        <div class="max-w-screen-xl mx-auto px-8 text-center text-xs text-white/40">
+            © 2026 Aether Labs. Building AI that helps humanity understand the universe.<br>
+            <span class="mt-1 inline-block">Open research • Sustainable business • Long-term impact</span>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('nav-scrolled', 'border-b', 'border-white/10');
+            } else {
+                navbar.classList.remove('nav-scrolled', 'border-b', 'border-white/10');
+            }
+        });
+
+        // Waitlist form handler
+        function handleWaitlistSubmit(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const btn = e.target.querySelector('button');
+            
+            btn.innerHTML = 'Thank you! <i class="fas fa-check ml-2"></i>';
+            btn.disabled = true;
+            
+            // In a real setup this would POST to a backend or service like Formspree / Buttondown
+            setTimeout(() => {
+                alert(`Thank you! We've added ${email} to the early access waitlist. We'll be in touch soon.`);
+                document.getElementById('email').value = '';
+                btn.innerHTML = 'Join Waitlist';
+                btn.disabled = false;
+            }, 1200);
+        }
+
+        // Simple analytics placeholder
+        console.log('%c[Aether Labs] Landing page loaded. Ready for GitHub Pages deployment.', 'color:#6366f1');
+    </script>
+</body>
+</html>
