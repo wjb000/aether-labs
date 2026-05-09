@@ -37,6 +37,16 @@ We envision Aether as the "operating system for scientific curiosity."
 | Hypothesis Generation | Automated discovery of testable scientific ideas   | Early R&D  |
 | Research Interfaces   | Intuitive platforms for scientists to work with AI | Concept    |
 
+## Product & Business Model
+
+**First Product:** Aether Research Platform
+
+An AI-powered scientific discovery platform (SaaS + API) that helps researchers synthesize literature, generate hypotheses, run simulations, and collaborate.
+
+**Monetization:** Hybrid open-core + premium SaaS (Free / Pro / Team / Enterprise tiers). See [BUSINESS_MODEL.md](BUSINESS_MODEL.md) for full strategy.
+
+We will generate revenue from subscriptions, enterprise partnerships, and premium services while keeping core research open.
+
 ## Getting Started
 
 This repository serves as the central hub for Aether Labs:
@@ -45,6 +55,7 @@ This repository serves as the central hub for Aether Labs:
 - **Code**: Core libraries and experiments will live here as we grow
 - **Discussions**: Use GitHub Discussions for ideas and collaboration
 - **Roadmap**: Track progress in [ROADMAP.md](ROADMAP.md)
+- **Business**: Full monetization plan in [BUSINESS_MODEL.md](BUSINESS_MODEL.md)
 
 ## How to Contribute
 
@@ -68,7 +79,7 @@ All open-source contributions in this repository are released under the [MIT Lic
 
 *“The universe is not only queerer than we suppose, but queerer than we can suppose.”* — J.B.S. Haldane
 
-**Let's build the tools to suppose better.**
+**Let's build the tools to suppose better — and build a profitable company doing it.**
 
 ---
 
